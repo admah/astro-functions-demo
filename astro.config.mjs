@@ -10,7 +10,9 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   output: "server",
   adapter: cloudflare({
+    mode: 'directory',
     runtime: {
+      type: 'pages',
       mode: "local"
     }
   })
